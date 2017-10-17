@@ -49,4 +49,8 @@
 		</dependencies>
 	</dependencyManagement>
 
+	<modules>
+		<module>wfw-registration-center</module>
+	</modules>
+	
 </project>
