@@ -10,3 +10,7 @@ TASKKILL /FI "WINDOWTITLE eq %SERVICE_NAME%*" /IM cmd.exe /F /T
 %SLEEP% 1 > nul
 SET SERVICE_NAME=wfw-provider-user
 TASKKILL /FI "WINDOWTITLE eq %SERVICE_NAME%*" /IM cmd.exe /F /T
+
+%SLEEP% 1 > nul
+SET SERVICE_NAME=wfw-consumer-user
+TASKKILL /FI "WINDOWTITLE eq %SERVICE_NAME%*" /IM cmd.exe /F /T
