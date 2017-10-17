@@ -73,8 +73,8 @@ public class UserController {
 		return new JsonResult<User>().msg("修改成功").data(user);
 	}
 	
-	@DeleteMapping(value="/")
-	public JsonResult<User> delete(int id) {
+	@DeleteMapping(value="/{id}")
+	public JsonResult<User> delete(@PathVariable int id) {
 		logger.info("删除用户 {}", id);
 		User user = new User();
 		user.setId(id);

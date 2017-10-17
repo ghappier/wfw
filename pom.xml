@@ -54,6 +54,7 @@
 		<module>wfw-registration-center</module>
 		<module>wfw-provider-user</module>
 		<module>wfw-commons</module>
-	</modules>
+		<module>wfw-consumer-user</module>
+</modules>
 	
 </project>
