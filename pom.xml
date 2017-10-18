@@ -5,7 +5,7 @@
 
 	<groupId>com.lizq</groupId>
 	<artifactId>wfw</artifactId>
-	<version>1.2.1</version>
+	<version>1.3.0</version>
 	<packaging>pom</packaging>
 
 	<name>wfw</name>
@@ -22,7 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<wfw-commons.version>1.2.1</wfw-commons.version>
+		<wfw-commons.version>1.3.0</wfw-commons.version>
 	</properties>
 
 	<dependencies>
@@ -55,6 +55,7 @@
 		<module>wfw-provider-user</module>
 		<module>wfw-commons</module>
 		<module>wfw-consumer-user</module>
-</modules>
-	
+		<module>wfw-consumer-user-feign</module>
+	</modules>
+
 </project>
