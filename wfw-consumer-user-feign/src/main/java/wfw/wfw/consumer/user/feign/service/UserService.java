@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import com.lizq.wfw.commons.json.JsonResult;
 import com.lizq.wfw.commons.model.User;
 
-@FeignClient("user-service")
+@FeignClient(name="user-service", fallback=UserServiceFallback.class)
 public interface UserService {
 
 	@GetMapping(value="/")
