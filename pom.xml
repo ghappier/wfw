@@ -55,6 +55,7 @@
 		<module>wfw-provider-user</module>
 		<module>wfw-commons</module>
 		<module>wfw-consumer-user</module>
-</modules>
-	
+		<module>wfw-consumer-user-feign</module>
+	</modules>
+
 </project>
