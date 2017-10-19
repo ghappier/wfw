@@ -1,0 +1,17 @@
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+#          uri: https://github.com/ghappier/config-center
+          uri: file:///D:\EclipseWorkspaces\SpringCloud\config-center #Windows用file:///开头，Linux用file://开头
+          search-paths: config-repo
+          username: 
+          password: 
+    
+server:
+  port: 8005
+  

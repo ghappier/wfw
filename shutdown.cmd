@@ -22,3 +22,7 @@ TASKKILL /FI "WINDOWTITLE eq %SERVICE_NAME%*" /IM cmd.exe /F /T
 %SLEEP% 1 > nul
 SET SERVICE_NAME=wfw-api-gateway
 TASKKILL /FI "WINDOWTITLE eq %SERVICE_NAME%*" /IM cmd.exe /F /T
+
+%SLEEP% 1 > nul
+SET SERVICE_NAME=wfw-config-server
+TASKKILL /FI "WINDOWTITLE eq %SERVICE_NAME%*" /IM cmd.exe /F /T
