@@ -56,6 +56,7 @@
 		<module>wfw-consumer-user</module>
 		<module>wfw-consumer-user-feign</module>
     <module>wfw-api-gateway</module>
-  </modules>
+    <module>wfw-config-server</module>
+	</modules>
 
 </project>
