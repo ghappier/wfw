@@ -11,10 +11,10 @@
 	</parent>
 	
 	<groupId>com.lizq.wfw</groupId>
-	<artifactId>wfw-provider-user</artifactId>
+	<artifactId>wfw-config-client</artifactId>
 	
-	<name>wfw-provider-user</name>
-	<description>服务提供者-用户服务</description>
+	<name>wfw-config-client</name>
+	<description>配置中心客户端</description>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,17 +22,12 @@
 	
 	<dependencies>
 		<dependency>
-			<groupId>com.lizq.wfw</groupId>
-			<artifactId>wfw-commons</artifactId>
-			<version>${wfw-commons.version}</version>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 	</dependencies>
 	

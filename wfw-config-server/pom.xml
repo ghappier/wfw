@@ -11,17 +11,29 @@
 	</parent>
 	
 	<groupId>com.lizq.wfw</groupId>
-	<artifactId>wfw-commons</artifactId>
-	<version>${wfw-commons.version}</version>
+	<artifactId>wfw-config-server</artifactId>
 	
-	<name>wfw-commons</name>
-	<url>http://maven.apache.org</url>
+	<name>wfw-config-server</name>
+	<description>配置中心服务端</description>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-server</artifactId>
+		</dependency>
 	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 	
 </project>
