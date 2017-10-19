@@ -11,10 +11,10 @@
 	</parent>
 	
 	<groupId>com.lizq.wfw</groupId>
-	<artifactId>wfw-consumer-user</artifactId>
+	<artifactId>wfw-api-gateway</artifactId>
 	
-	<name>wfw-consumer-user</name>
-	<description>服务消费者-用户</description>
+	<name>wfw-api-gateway</name>
+	<description>api网关</description>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,25 +22,12 @@
 	
 	<dependencies>
 		<dependency>
-			<groupId>com.lizq.wfw</groupId>
-			<artifactId>wfw-commons</artifactId>
-			<version>${wfw-commons.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zuul</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-ribbon</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-hystrix</artifactId>
 		</dependency>
 	</dependencies>
 	
