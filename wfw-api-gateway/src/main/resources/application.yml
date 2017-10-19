@@ -1,0 +1,24 @@
+
+spring:
+  application:
+    name: api-gateway
+    
+server:
+  port: 8004
+  
+zuul:
+  routes:
+    users:
+      path: /users/**
+      service-id: user-service
+    users-consumer:
+      path: /users-consumer/**
+      service-id: consumer-user
+    users-feign:
+      path: /users-feign/**
+      service-id: consumer-user-feign
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
