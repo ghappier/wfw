@@ -8,6 +8,16 @@ spring:
       profile: dev
       label: master
       uri: http://localhost:8005/
+    stream:
+      kafka:
+        binder:
+          brokers: localhost
+          defaultBrokerPort: 9092
+          zkNodes: localhost
+          defaultZkPort: 2181
+    bus:
+      trace:
+        enabled: true
     
 server:
   port: 8006

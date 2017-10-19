@@ -11,6 +11,13 @@ spring:
           search-paths: config-repo
           username: 
           password: 
+    stream:
+      kafka:
+        binder:
+          brokers: localhost
+          defaultBrokerPort: 9092
+          zkNodes: localhost
+          defaultZkPort: 2181
     
 server:
   port: 8005
