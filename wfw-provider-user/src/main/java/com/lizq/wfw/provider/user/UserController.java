@@ -78,6 +78,6 @@ public class UserController {
 		logger.info("删除用户 {}", id);
 		User user = new User();
 		user.setId(id);
-		return new JsonResult<User>().msg("修改成功").data(user);
+		return new JsonResult<User>().msg("删除成功").data(user);
 	}
 }
