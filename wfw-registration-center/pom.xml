@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>com.lizq</groupId>
 		<artifactId>wfw</artifactId>
-		<version>1.5.2</version>
+		<version>1.5.3</version>
 	</parent>
 
 	<groupId>com.lizq.wfw</groupId>

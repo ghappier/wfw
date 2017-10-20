@@ -3,7 +3,7 @@ TITLE startup
 
 SET SLEEP=ping 127.0.0.1 /n
 SET PROJECT_PATH=D:\EclipseWorkspaces\SpringCloud\wfw
-SET VERSION=1.5.2
+SET VERSION=1.5.3
 
 %SLEEP% 1 > nul
 SET SERVICE_NAME=wfw-registration-center
