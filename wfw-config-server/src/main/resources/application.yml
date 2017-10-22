@@ -1,4 +1,25 @@
 
+# 配置中心服务端配置总结：
+# 1、uri表示git仓库的地址，及有.git的文件夹
+# 2、search-paths表示git仓库下的目录，如果配置文件放置在Git存储库的根目录下，则无需使用search-paths参数
+# 3、uri的配置有两种方式，一是带{application}占位符的，而是不带{application}占位符的，这两种方式的区别如下：
+#   a、带{application}占位符：
+#     若config-client中配置了spring.cloud.config.name，用spring.cloud.config.name的值替换uri中{application}占位符即为git仓库地址，
+#       例如，uri=file:///D:\EclipseWorkspaces\SpringCloud\config-center\{application}，config-client中spring.cloud.config.name=neo-config，
+#       则git仓库地址为file:///D:\EclipseWorkspaces\SpringCloud\config-center\neo-config，
+#       配置文件为application-dev.yml、application-test.yml、application-prod.yml等。
+#     若config-client中没有配置spring.cloud.config.name，而配置了spring.application.name，用spring.application.name的值替换uri中{application}占位符即为git仓库地址，
+#       例如，uri=file:///D:\EclipseWorkspaces\SpringCloud\config-center\{application}，config-client中spring.application.name=config-client，
+#       则git仓库地址为file:///D:\EclipseWorkspaces\SpringCloud\config-center\config-client，
+#       配置文件为application-dev.yml、application-test.yml、application-prod.yml等。
+#   b、不带{application}占位符（这种情况仓库地址为uri，配置文件目录为search-paths）：
+#     若config-client中配置了spring.cloud.config.name，则配置文件格式为：{spring.cloud.config.name}-{profile}.yml
+#       例如，config-client中spring.cloud.config.name=neo-config，
+#       则配置文件为neo-config-dev.yml、neo-config-test.yml、neo-config-prod.yml等。
+#     若config-client中没有配置spring.cloud.config.name，而配置了spring.application.name，则配置文件格式为：{spring.application.name}-{profile}.yml，
+#       例如，config-client中spring.application.name=config-client,
+#       则配置文件为config-client-dev.yml、config-client-test.yml、config-client-prod.yml等。
+
 spring:
   application:
     name: config-server
@@ -7,8 +28,8 @@ spring:
       server:
         git:
 #          uri: https://github.com/ghappier/config-center
-          uri: file:///D:\EclipseWorkspaces\SpringCloud\config-center #Windows用file:///开头，Linux用file://开头
-          search-paths: config-repo
+          uri: file:///D:\EclipseWorkspaces\SpringCloud\config-center\{application} #Windows用file:///开头，Linux用file://开头
+#          search-paths: config-repo #如果配置文件放置在Git存储库的根目录下，则无需使用search-paths参数
           username: 
           password: 
     stream:

@@ -1,4 +1,10 @@
 
+# 配置中心客户端配置注意事项
+# 以下属性必须在bootstrap.yml文件中配置（这样config-server中的配置信息才能被config-client正确加载）：
+# 1、spring.application.name
+# 2、server.port
+# 3、spring.cloud.config相关的属性
+
 spring:
   application:
     name: config-client
