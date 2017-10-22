@@ -1,0 +1,5 @@
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/ #defaultZone不能写成default-zone,否则无法注册服务
