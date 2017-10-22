@@ -4,13 +4,15 @@
 # 1、spring.application.name
 # 2、server.port
 # 3、spring.cloud.config相关的属性
+# 4、spring.cloud.stream相关的属性
+# 5、eureka相关的属性
 
 spring:
   application:
     name: config-client
   cloud:
     config:
-      name: neo-config
+      name: neo
       profile: dev
       label: master
 #      uri: http://localhost:8005/
@@ -29,9 +31,11 @@ spring:
         enabled: true
     
 server:
-  port: 8006
+  port: 8033
   
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8000/eureka/
+#      defaultZone: http://localhost:8000/eureka/ #defaultZone不能写成default-zone,否则无法注册服务
+      defaultZone: http://peer1:8001/eureka/,http://peer2:8002/eureka/,http://peer3:8003/eureka/ #defaultZone不能写成default-zone,否则无法注册服务
+      
