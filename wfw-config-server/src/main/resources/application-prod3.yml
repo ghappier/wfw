@@ -21,8 +21,28 @@
 #       则配置文件为config-client-dev.yml、config-client-test.yml、config-client-prod.yml等。
 
 spring:
-  application:
-    name: config-server
-  profiles:
-    active: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ghappier/{application}-config
+#          uri: file:///D:\EclipseWorkspaces\SpringCloud\config-center\{application} #Windows用file:///开头，Linux用file://开头
+#          search-paths: config-repo #如果配置文件放置在Git存储库的根目录下，则无需使用search-paths参数
+          username: 
+          password: 
+    stream:
+      kafka:
+        binder:
+          brokers: localhost
+          defaultBrokerPort: 9092
+          zkNodes: localhost
+          defaultZkPort: 2181
+    
+server:
+  port: 8023
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8001/eureka/,http://peer2:8002/eureka/,http://peer3:8003/eureka/ #defaultZone不能写成default-zone,否则无法注册服务
   

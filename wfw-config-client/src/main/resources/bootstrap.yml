@@ -1,13 +1,24 @@
 
+# 配置中心客户端配置注意事项
+# 以下属性必须在bootstrap.yml文件中配置（这样config-server中的配置信息才能被config-client正确加载）：
+# 1、spring.application.name
+# 2、server.port
+# 3、spring.cloud.config相关的属性
+# 4、spring.cloud.stream相关的属性
+# 5、eureka相关的属性
+
 spring:
   application:
     name: config-client
   cloud:
     config:
-      name: neo-config
+      name: neo
       profile: dev
       label: master
-      uri: http://localhost:8005/
+#      uri: http://localhost:8005/
+      discovery:
+        enabled: true
+        service-id: config-server
     stream:
       kafka:
         binder:
@@ -20,9 +31,11 @@ spring:
         enabled: true
     
 server:
-  port: 8006
+  port: 8033
   
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8000/eureka/
+#      defaultZone: http://localhost:8000/eureka/ #defaultZone不能写成default-zone,否则无法注册服务
+      defaultZone: http://peer1:8001/eureka/,http://peer2:8002/eureka/,http://peer3:8003/eureka/ #defaultZone不能写成default-zone,否则无法注册服务
+      

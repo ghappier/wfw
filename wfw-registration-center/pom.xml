@@ -5,12 +5,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.lizq</groupId>
+		<groupId>com.lizq.wfw</groupId>
 		<artifactId>wfw</artifactId>
-		<version>1.5.2</version>
+		<version>1.5.4</version>
 	</parent>
 
-	<groupId>com.lizq.wfw</groupId>
 	<artifactId>wfw-registration-center</artifactId>
 
 	<name>wfw-registration-center</name>

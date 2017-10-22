@@ -1,0 +1,11 @@
+    
+server:
+  port: 8001
+  
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    service-url:
+      defaultZone: http://peer2:8002/eureka/,http://peer3:8003/eureka/ #defaultZone不能写成default-zone,否则无法注册服务
+      
