@@ -7,7 +7,10 @@ spring:
       name: neo-config
       profile: dev
       label: master
-      uri: http://localhost:8005/
+#      uri: http://localhost:8005/
+      discovery:
+        enabled: true
+        service-id: config-server
     stream:
       kafka:
         binder:
