@@ -3,7 +3,7 @@ TITLE startup
 
 SET SLEEP=ping 127.0.0.1 /n
 SET PROJECT_PATH=D:\EclipseWorkspaces\SpringCloud\wfw
-SET VERSION=1.5.4
+SET VERSION=1.5.5
 
 REM 为了减少内存占用（正式环境请不要这么做），用-Xmx128M限制最大内存为128M，注意，-Xmx128M参数要紧跟在java命令之后。
 
